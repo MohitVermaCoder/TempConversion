@@ -1,0 +1,14 @@
+<form [formGroup]="temperatureConverter">
+  <div class="layout-column align-items-center mt-50">
+  
+    <section class="layout-row align-items-center justify-content-between">
+      <label>Celsius: </label>
+      <input type="number" formControlName="celsius" class="large"  (blur)="celToFah(temperatureConverter.value)" data-test-id="celsius-input"/>
+    </section>
+  
+    <section class="layout-row align-items-center justify-content-between">
+        <label>Fahrenheit: </label>
+        <input type="number" class="large" formControlName="fahren" (blur)="fahToCel(temperatureConverter.value)" data-test-id="fahrenheit-input"/>
+    </section>
+  </div>
+  </form>
